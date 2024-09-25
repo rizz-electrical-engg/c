@@ -99,10 +99,4 @@ logging.getLogger("urllib3").setLevel(logging.WARNING)
 LOGGER = logging.getLogger(__name__)
 
 # Client
-app = Client(
-    session,
-    bot_token=bot_token,
-    api_id=api_id,
-    api_hash=api_hash,
-    plugins={'root': os.path.join(__package__, 'plugins')},
-    sleep_threshold=30)
+app = Client(session,bot_token=bot_token,api_id=api_id,api_hash=api_hash, plugins={'root': os.path.join(__package__, 'plugins')}, sleep_threshold=30)
